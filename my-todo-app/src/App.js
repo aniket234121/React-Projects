@@ -6,7 +6,7 @@ const App = () => {
 
   return (
     <>
-      <h1 className='title'>Get Your Things Done</h1>
+      <h1 className='title'>Enter task To - do</h1>
       <div className='container'>
         <div className='todoBanner'>
           <Input></Input>

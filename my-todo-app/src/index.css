@@ -1,12 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Protest+Riot&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Protest+Riot&display=swap');
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Protest Riot", sans-serif;
+
 }
 html,body{
     height: 100%;
     width: 100%;
-    background-color: #12372A;
+    background-color: #181717;
 }
 .container{
     display: flex;
@@ -14,13 +18,11 @@ html,body{
     justify-content: center;
 }
 .todoBanner{
-    /* border: 1px solid black; */
     padding: 10px 10px 30px;
     width: 500px;
-    background-color: #ADBC9F;
 }
 #todo::placeholder{
-    color: #12372A;
+    color: grey;;
 }
 #todo{
     height: 30px;
@@ -29,7 +31,8 @@ html,body{
     padding: 10px;
     font-size: 18px;
     border: 1px solid #436850;
-    color: #12372A;
+    color: whitesmoke;
+    background: #2e2e2e;
 }
 .btn{
     height: 30px;
@@ -73,14 +76,25 @@ form{
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: red;
+    color: #fff;
+    transition: all 0.25s linear;
+    font-size: 20px;
+    border: 1px solid red;
+    
+}
+.btn-todo:hover{
+    color: red;
+    background-color: transparent;
 }
 .title{
     text-align: center;
     padding-top:200px;
     padding-bottom: 20px;
     color: #FBFADA;
+    font-family: "Great Vibes", cursive;
+    font-size: 50px;
 }
 .list{
-    color: #12372A;
-    font-weight: bold;
+    color: #fff;
 }

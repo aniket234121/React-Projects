@@ -25,7 +25,7 @@ const Input = () => {
         <input type="text" name='addList' id='todo' placeholder='Enter the task to do'/>
         <button type="submit" name='submit' className='btn'>+</button>
       </form>
-      <ul className='list'>{list.map(item => (<li key={uuidv4() }><p>{item}</p><button className='btn btn-todo' value={item} onClick={removeList}>-</button></li>))}
+      <ul className='list'>{list.map(item => (<li key={uuidv4() }><p>{item}</p><button className='btn-todo' value={item} onClick={removeList}>-</button></li>))}
       </ul>
     </>
   )
