@@ -2,14 +2,19 @@ import React from 'react'
 import Input from './components/Input'
 
 const App = () => {
+
+
   return (
     <>
-    <div className='container'>
-      <Input></Input>
-    </div>
+      <h1 className='title'>Get Your Things Done</h1>
+      <div className='container'>
+        <div className='todoBanner'>
+          <Input></Input>
+        </div>
+      </div>
     </>
 
-    )
+  )
 }
 
 export default App

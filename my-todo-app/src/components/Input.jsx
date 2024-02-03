@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { v4 as uuidv4 } from 'uuid';
 
 const Input = () => {
 
@@ -9,22 +10,22 @@ const Input = () => {
     let val = event.target.addList.value;
     if(val!=='')
     {
-      setList([...list,val]);
+      setList(prevList=>[...prevList,val]);
     }
     
     event.target.addList.value = ""
   }
-  const updateList = (event) => {
-    setList(list.filter(item=>(item!==event.target.value)))
+  const removeList = (event) => {
+    setList(prevList=>prevList.filter(item=>(item!==event.target.value)))
   }
 
   return (
     <>
       <form onSubmit={handleSubmit}>
-        <input type="text" name='addList' />
-        <button type="submit" name='submit'>+</button>
+        <input type="text" name='addList' id='todo' placeholder='Enter the task to do'/>
+        <button type="submit" name='submit' className='btn'>+</button>
       </form>
-      <ul>{list.map(item => (<li key={Math.random()}>{item} <button value={item} onClick={updateList}>-</button> </li>))}
+      <ul className='list'>{list.map(item => (<li key={uuidv4() }><p>{item}</p><button className='btn btn-todo' value={item} onClick={removeList}>-</button></li>))}
       </ul>
     </>
   )
