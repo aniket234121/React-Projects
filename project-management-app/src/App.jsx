@@ -31,14 +31,16 @@ const App = () => {
       };
       return {
         ...prevstate,
+        projectselectedId:undefined,
         projects:[...prevstate.projects,newProject]
       }
     })
+    
   }
-  console.log(projectslected)
+  
   return (
     <main className="h-screen my-4 flex gap-8">
-      <Sidebar onStartAdd={handleAddNewProject}></Sidebar>
+      <Sidebar onStartAdd={handleAddNewProject} projectsObj={projectslected}></Sidebar>
       {content}
     </main>
   );
