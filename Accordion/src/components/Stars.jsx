@@ -23,11 +23,12 @@ const Stars = ({ count }) => {
         return (
           <GoStarFill
             className={
-              starPos != -1
-                ? starPos >= index && "text-yellow-400"
-                : hoverStar >= index
-                ? "text-yellow-300 "
-                : "text-black-400"
+              index<=starPos || index<=hoverStar ?"text-yellow-400":"text-black-400"
+              // starPos != -1
+              //   ? starPos >= index && "text-yellow-400"
+              //   : hoverStar >= index
+              //   ? "text-yellow-300 "
+              //   : "text-black-400"
             }
             key={index}
             onMouseMove={() => {

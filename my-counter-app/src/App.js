@@ -1,14 +1,14 @@
-import React from 'react'
-import Counter from './component/Counter'
+import React from "react";
+import Counter from "./component/Counter";
 
 const App = () => {
   return (
-   <><div className='container'>
-    <Counter></Counter>
-   </div>
-   
-   </>
-  )
-}
+    <>
+      <div className="container">
+        <Counter></Counter>
+      </div>
+    </>
+  );
+};
 
-export default App
+export default App;
