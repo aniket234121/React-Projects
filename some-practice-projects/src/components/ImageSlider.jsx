@@ -35,7 +35,7 @@ const ImageSlider = () => {
       <ul className="absolute bottom-4 text-white right-[50%] flex gap-4 translate-x-[50%]">
         {imageData.map((item, index) => {
           return (
-            <VscCircleLargeFilled
+            <VscCircleLargeFilled key={index}
               className={index === currImg && "text-red-700"}
             />
           );
