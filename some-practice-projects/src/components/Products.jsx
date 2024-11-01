@@ -11,7 +11,7 @@ function Products() {
       .then((data) => {
         setData(data);
         setLoading(false);
-        console.log(data);
+        
       })
       .catch((error) => {
         console.error("Error fetching data:", error);
@@ -34,7 +34,7 @@ function Products() {
       <ul className="gap-2 justify-evenly grid grid-cols-4 grid-flow-row">
         {content.map((item, index) => {
           return (
-            <div className="bg-slate-400 p-3 flex flex-col justify-center items-center ">
+            <div key={index} className="bg-slate-400 p-3 flex flex-col justify-center items-center ">
               <img
                 src={item.images}
                 alt={item.title}
