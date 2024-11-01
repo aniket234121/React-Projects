@@ -29,28 +29,28 @@ function Products() {
   let content = data.products.filter((item, index) => index < count);
 
   return (
-    <div className="relative w-screen h-fit text-center my-2">
-      <h1>Load More </h1>
-      <ul className="gap-2 justify-evenly grid grid-cols-4 grid-flow-row">
+    <div className="relative w-4/5 h-[100vh] text-center border border-sky-600">
+     
+      <ul className="gap-1 justify-evenly grid grid-cols-4 grid-flow-row">
         {content.map((item, index) => {
           return (
-            <div key={index} className="bg-slate-400 p-3 flex flex-col justify-center items-center ">
+            <div key={index} className="bg-slate-400 p-2 flex flex-col justify-center items-center ">
               <img
                 src={item.images}
                 alt={item.title}
-                height={200}
-                width={200}
+                height={100}
+                width={100}
                 className="mx-auto"
               />
-              <li key={index} className="text-xl font-bold my-3">{item.title}</li>
-              <p className="text-slate-800 text-justify w-fit px-5 text-base">{item.description}</p>
+              <li key={index} className="text-sm font-bold my-1">{item.title}</li>
+              <p className="text-slate-800 text-justify w-fit px-5 text-xs">{item.description}</p>
             </div>
           );
         })}
       </ul>
       <button
         onClick={handleClickLoadMore}
-        className="bg-slate-900 text-white p-2 hover:bg-slate-700 block mx-auto my-5"
+        className="bg-slate-900 text-white p-2 hover:bg-slate-700 block mx-auto  my-3"
       >
         LoadMore
       </button>
