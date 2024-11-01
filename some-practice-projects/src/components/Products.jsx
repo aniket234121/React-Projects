@@ -1,6 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState,useContext } from "react";
+import { ThemeContext } from "./ThemeContextProvider";
 
 function Products() {
+  const{theme}=useContext(ThemeContext)
   const [data, setData] = useState({});
   const [loading, setLoading] = useState(true);
   const [count, setCount] = useState(10);
@@ -27,9 +29,9 @@ function Products() {
   }
 
   let content = data.products.filter((item, index) => index < count);
-
+  
   return (
-    <div className="relative w-4/5 h-[100vh] text-center border border-sky-600">
+    <div className={`relative w-4/5 h-fit text-center border border-sky-600 ${theme==='dark'?'bg-slate-600':'bg-slate-300'}`}>
      
       <ul className="gap-1 justify-evenly grid grid-cols-4 grid-flow-row">
         {content.map((item, index) => {
