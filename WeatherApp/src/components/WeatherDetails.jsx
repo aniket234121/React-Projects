@@ -13,7 +13,7 @@ import { BsThermometerSnow } from "react-icons/bs";
 import { GiHeatHaze } from "react-icons/gi";
 import { PiHandCoins } from "react-icons/pi";
 const WeatherDetails = ({ WeatherData }) => {
-  console.log(WeatherData);
+  // console.log(WeatherData);
   return (
     <div
       className="text-[#f3ff14] flex rounded-3xl p-4 h-[80vh]  my-7 capitalize
@@ -25,7 +25,7 @@ const WeatherDetails = ({ WeatherData }) => {
             <img
               src={WeatherData.current.is_day === 1 ? image : night}
               alt="weather app"
-              className="w-[150px] mx-auto mt-5 h-[150px]"
+              className="w-[170px] mx-auto mt-5 "
             />
             <div className="flex justify-center items-center gap-1 text-xl mt-5 text-justify">
               <h2 className="italic inline-block  mr-1 ">
@@ -62,7 +62,7 @@ const WeatherDetails = ({ WeatherData }) => {
               {" "}
               Sky {WeatherData.current.condition.text}
             </p>
-            <div className="mx-5 mt-10 px-8 gap-7 grid grid-flow-row grid-cols-2  ">
+            <div className="mx-10 mt-10 gap-7 grid grid-flow-row grid-cols-2  ">
               <div className="flex gap-3  items-center">
                 <TbTemperature />
                 <h3>Temperature:</h3>
@@ -100,7 +100,7 @@ const WeatherDetails = ({ WeatherData }) => {
                 <h3>Wind Direction :</h3>
                 <p>
                   {WeatherData.current.wind_degree}&deg;{" "}
-                  {WeatherData.current.wind_dir};
+                  {WeatherData.current.wind_dir}
                 </p>
               </div>
               <div className="flex gap-3  items-center">
