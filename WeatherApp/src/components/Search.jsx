@@ -1,22 +1,13 @@
-import React, { useImperativeHandle, useState, useRef, useEffect, forwardRef } from "react";
+import React, {  useState, useRef, useEffect,} from "react";
 import { IoSearchCircle } from "react-icons/io5";
 import { ImLocation2 } from "react-icons/im";
 import getWeather from "../Util";
 
-const Search = ({ onDataFetch }, ref) => {
+const Search = ({ onDataFetch }) => {
   const inputRef = useRef("");
   const CountryRef=useRef("");
   const [searchedVal, setSearchedVal] = useState("");
-  const [data, setData] = useState();
-
-  // Expose the getData function via ref
-  useImperativeHandle(ref, () => ({
-    getData,
-  }));
-
-  function getData() {
-    return data;
-  }
+  const [data, setData] = useState();  
 
   const handleClick = () => {
     if (inputRef.current.value) {
@@ -80,4 +71,4 @@ const Search = ({ onDataFetch }, ref) => {
   );
 };
 
-export default forwardRef(Search);
+export default Search;
