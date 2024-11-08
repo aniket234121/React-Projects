@@ -19,7 +19,6 @@ const App = () => {
           <Products></Products>
         </div>
         <QrCode />
-        
       </ThemeContextProvider>
     </>
   );
